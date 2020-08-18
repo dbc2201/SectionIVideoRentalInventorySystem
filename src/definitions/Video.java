@@ -31,12 +31,30 @@ public class Video {
         return videoName;
     }
 
+    public void setVideoName(String videoName) {
+        this.videoName = videoName;
+    }
+
     public int getRating() {
         return rating;
+    }
+
+    // 2. a setter method: used to write the value of a private field.
+    // transformer method / mutator method
+
+    // formula to create a setter method.
+    // public <am:sameAsTheField> void set<NameOfTheField>(<SameAsTheField>) {}
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     // exception for boolean: the name of the getter method starts with 'is' instead of 'get'
     public boolean isCheckout() {
         return checkout;
+    }
+
+    public void setCheckout(boolean checkout) {
+        this.checkout = checkout;
     }
 }
