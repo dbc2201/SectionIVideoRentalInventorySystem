@@ -20,4 +20,23 @@ public class Video {
     private int rating;
     private boolean checkout;
 
+    // There are some special types of methods:
+    // 1. a getter method: used to read the value of a private field.
+    // observer method / accessor method
+
+    // formula for getter method
+    // public <am:sameAsTheField> <rt:sameAsTheField> get<NameOfTheField>() {}
+
+    public String getVideoName() {
+        return videoName;
+    }
+
+    public int getRating() {
+        return rating;
+    }
+
+    // exception for boolean: the name of the getter method starts with 'is' instead of 'get'
+    public boolean isCheckout() {
+        return checkout;
+    }
 }
