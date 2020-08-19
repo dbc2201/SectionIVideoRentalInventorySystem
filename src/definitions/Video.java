@@ -63,4 +63,13 @@ public class Video {
     public void setCheckout(boolean checkout) {
         this.checkout = checkout;
     }
+
+    // the toString() method : used to convert an object to String
+    public String toString() {
+        return String.format(
+                "Video Name: %s, Video Rating: %d, Is Video Available: %b",
+                getVideoName(), getRating(), isCheckout()
+        );
+    }
+
 }
