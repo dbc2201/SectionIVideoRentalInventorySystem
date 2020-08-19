@@ -27,4 +27,21 @@ public class VideoStore {
     public String toString() {
         return Arrays.toString(store);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VideoStore that = (VideoStore) o;
+        return Arrays.equals(getStore(), that.getStore());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getStore());
+    }
 }
