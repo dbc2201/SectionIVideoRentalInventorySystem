@@ -10,10 +10,8 @@ import definitions.Video;
 
 public class Main {
     public static void main(String[] args) {
-        Video video = new Video();
-        video.setVideoName("Sivaji: The Boss");
-        video.setRating(5);
-        video.setCheckout(true);
+        // <The Reference Type> <The Reference Variable Name> = new <Constructor Calling>;
+        Video video = new Video("Sooryavansham");
         System.out.println(
                 "Video Name: " + video.getVideoName() + ", " +
                         "Video Rating: " + video.getRating() + ", " +

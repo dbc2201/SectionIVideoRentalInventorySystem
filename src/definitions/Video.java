@@ -7,25 +7,38 @@
 package definitions;
 
 public class Video {
-
-    // Creating Definition Classes in Java.
-
-    // member variables =?
-    // fields/variables/attributes
-
-    // 1. Always set the visibility modifier of a field to private unless otherwise specified.
-    // 2. Always set the access modifier of a field to non-static unless otherwise specified.
-
     private String videoName;
     private int rating;
     private boolean checkout;
 
-    // There are some special types of methods:
-    // 1. a getter method: used to read the value of a private field.
-    // observer method / accessor method
+    // The Constructor Method : Used to initialize the attributes of an object.
+    // public <non-static> <no-return type> <SameAsTheClassName> () {}
 
-    // formula for getter method
-    // public <am:sameAsTheField> <rt:sameAsTheField> get<NameOfTheField>() {}
+    // The Java compiler creates a no-parameter constructor for us automatically.
+    // default constructor
+
+    // we can create two types of constructors:
+    // 1. Non-Parameterized Constructors : The constructor has no parameters.
+
+    public Video() {
+        this.videoName = "";
+        this.rating = 0;
+        this.checkout = false;
+    }
+
+    // 2. Parameterized Constructors : They have some parameters.
+
+    public Video(String videoName, int rating, boolean checkout) {
+        this.videoName = videoName;
+        this.rating = rating;
+        this.checkout = checkout;
+    }
+
+    public Video(String videoName) {
+        this.videoName = videoName;
+        this.rating = 100;
+        this.checkout = true;
+    }
 
     public String getVideoName() {
         return videoName;
@@ -39,17 +52,10 @@ public class Video {
         return rating;
     }
 
-    // 2. a setter method: used to write the value of a private field.
-    // transformer method / mutator method
-
-    // formula to create a setter method.
-    // public <am:sameAsTheField> void set<NameOfTheField>(<SameAsTheField>) {}
-
     public void setRating(int rating) {
         this.rating = rating;
     }
 
-    // exception for boolean: the name of the getter method starts with 'is' instead of 'get'
     public boolean isCheckout() {
         return checkout;
     }
