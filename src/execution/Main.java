@@ -12,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         // <The Reference Type> <The Reference Variable Name> = new <Constructor Calling>;
         Video video = new Video("Sooryavansham");
-        System.out.println(video);
+        Video video1 = new Video("Sivaji: The Boss");
+        System.out.println(video.hashCode());
+        System.out.println(video1.hashCode());
     }
 }

@@ -6,7 +6,18 @@
  * */
 package definitions;
 
+import java.util.Objects;
+
 public class Video {
+
+    // Components of a Definition Class:
+    // 1. private fields.
+    // 2. Getter methods for private fields.
+    // 3. Setter methods for private fields.
+    // 4. Constructor methods for initializing the attributes of the object.
+    // 5. The toString() method.
+    // 6. The equals() and the hashCode() method.
+
     private String videoName;
     private int rating;
     private boolean checkout;
@@ -72,4 +83,27 @@ public class Video {
         );
     }
 
+    // The equals() and the hashCode() methods.
+    // The Object class in Java is the super class (parent) of all other classes.
+    // When we create any class in Java, it automatically inherits the Object class.
+
+    // video.equals(video1)
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) { // video == video1
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        Video video = (Video) o;
+        return this.getRating() == video.getRating() &&
+                this.isCheckout() == video.isCheckout() &&
+                this.getVideoName().equals(video.getVideoName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getVideoName(), getRating(), isCheckout());
+    }
 }
