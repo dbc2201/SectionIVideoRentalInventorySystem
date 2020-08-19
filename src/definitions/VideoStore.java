@@ -9,6 +9,10 @@ package definitions;
 public class VideoStore {
     private Video[] store;
 
+    public VideoStore(Video[] store) {
+        this.store = store;
+    }
+
     public Video[] getStore() {
         return store.clone();
     }
