@@ -15,6 +15,12 @@ public class VideoStore {
         this.store = store;
     }
 
+    public void listInventory() {
+        for (Video video : store) {
+            System.out.println(video);
+        }
+    }
+
     public Video[] getStore() {
         return store.clone();
     }
