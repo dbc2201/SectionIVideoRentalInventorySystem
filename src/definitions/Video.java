@@ -9,7 +9,6 @@ package definitions;
 import java.util.Objects;
 
 public class Video {
-
     // Components of a Definition Class:
     // 1. private fields.
     // 2. Getter methods for private fields.
