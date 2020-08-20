@@ -49,6 +49,18 @@ public class VideoStore {
     }
 
     /**
+     * This method sets a new rating of a video.
+     *
+     * @param name   The name of the video whose rating you want to set.
+     * @param rating The new rating of the video.
+     */
+    public void receiveRating(String name, int rating) {
+        System.out.println(
+                "The rating of \"" + name + "\" is now set to " + rating + "."
+        );
+    }
+
+    /**
      * This method prints all the videos in the inventory (store array).
      */
     public void listInventory() {

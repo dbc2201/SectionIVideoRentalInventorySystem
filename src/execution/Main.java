@@ -15,5 +15,6 @@ public class Main {
         myVideoStore.addVideo(movieName);
         myVideoStore.doCheckout(movieName);
         myVideoStore.doReturn(movieName);
+        myVideoStore.receiveRating(movieName, 4);
     }
 }
