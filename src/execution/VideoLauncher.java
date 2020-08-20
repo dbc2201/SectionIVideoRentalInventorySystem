@@ -8,7 +8,7 @@ package execution;
 
 import definitions.VideoStore;
 
-public class Main {
+public class VideoLauncher {
     public static void main(String[] args) {
         VideoStore myVideoStore = new VideoStore();
         final String movieName = "Sooryavansham";
