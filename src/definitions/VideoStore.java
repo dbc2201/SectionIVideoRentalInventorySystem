@@ -29,6 +29,15 @@ public class VideoStore {
     }
 
     /**
+     * This method will help the client to rent a video.
+     *
+     * @param name The name of the video that the client wants to rent.
+     */
+    public void doCheckout(String name) {
+        System.out.println("Thank you for renting \"" + name + "\".");
+    }
+
+    /**
      * This method prints all the videos in the inventory (store array).
      */
     public void listInventory() {

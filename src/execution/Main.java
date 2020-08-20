@@ -11,6 +11,8 @@ import definitions.VideoStore;
 public class Main {
     public static void main(String[] args) {
         VideoStore myVideoStore = new VideoStore();
-        myVideoStore.addVideo("Sooryavansham");
+        final String movieName = "Sooryavansham";
+        myVideoStore.addVideo(movieName);
+        myVideoStore.doCheckout(movieName);
     }
 }
