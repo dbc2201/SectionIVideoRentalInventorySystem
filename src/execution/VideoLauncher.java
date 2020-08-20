@@ -43,6 +43,10 @@ public class VideoLauncher {
                     myVideoStore.addVideo(videoName);
                     break;
                 case CHECK_OUT_VIDEO:
+                    System.out.println("Enter the name of the video you wan to rent: ");
+                    scanner.nextLine();
+                    videoName = scanner.nextLine();
+                    myVideoStore.doCheckout(videoName);
                     break;
                 case RETURN_VIDEO:
                     break;
