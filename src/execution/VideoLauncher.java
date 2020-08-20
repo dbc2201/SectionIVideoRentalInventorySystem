@@ -49,6 +49,10 @@ public class VideoLauncher {
                     myVideoStore.doCheckout(videoName);
                     break;
                 case RETURN_VIDEO:
+                    System.out.println("Enter the name of the video you want to return: ");
+                    scanner.nextLine();
+                    videoName = scanner.nextLine();
+                    myVideoStore.doReturn(videoName);
                     break;
                 case RECEIVE_RATING:
                     break;
