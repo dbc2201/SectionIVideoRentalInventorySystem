@@ -11,8 +11,21 @@ import java.util.Arrays;
 public class VideoStore {
     private Video[] store;
 
+    public VideoStore() {
+        this.store = new Video[10];
+    }
+
     public VideoStore(Video[] store) {
         this.store = store;
+    }
+
+    /**
+     * This method will add a new video to our inventory (store array).
+     *
+     * @param name The name of the new video that you want to add to the inventory.
+     */
+    public void addVideo(String name) {
+        System.out.println(name + " is now added to the video inventory.");
     }
 
     /**

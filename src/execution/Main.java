@@ -6,16 +6,11 @@
  * */
 package execution;
 
-import definitions.Video;
 import definitions.VideoStore;
 
 public class Main {
     public static void main(String[] args) {
-        Video[] videos = new Video[5];
-        for (int i = 0; i < videos.length; i++) {
-            videos[i] = new Video("Video" + (i + 1));
-        }
-        VideoStore myVideoStore = new VideoStore(videos);
-        myVideoStore.listInventory();
+        VideoStore myVideoStore = new VideoStore();
+        myVideoStore.addVideo("Sooryavansham");
     }
 }
