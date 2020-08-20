@@ -11,7 +11,6 @@ import definitions.VideoStore;
 import java.util.Scanner;
 
 public class VideoLauncher {
-
     private static final int ADD_VIDEO = 1;
     private static final int CHECK_OUT_VIDEO = 2;
     private static final int RETURN_VIDEO = 3;
