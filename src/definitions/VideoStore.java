@@ -38,6 +38,17 @@ public class VideoStore {
     }
 
     /**
+     * This method will return a rented video to the inventory.
+     *
+     * @param name The name of the video that the client wants to return.
+     */
+    public void doReturn(String name) {
+        System.out.println(
+                "Thank you for returning \"" + name + "\". Hope you liked it."
+        );
+    }
+
+    /**
      * This method prints all the videos in the inventory (store array).
      */
     public void listInventory() {

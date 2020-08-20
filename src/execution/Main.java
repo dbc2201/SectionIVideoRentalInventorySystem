@@ -14,5 +14,6 @@ public class Main {
         final String movieName = "Sooryavansham";
         myVideoStore.addVideo(movieName);
         myVideoStore.doCheckout(movieName);
+        myVideoStore.doReturn(movieName);
     }
 }
