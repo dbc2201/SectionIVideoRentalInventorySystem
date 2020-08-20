@@ -35,6 +35,7 @@ public class VideoLauncher {
             System.out.println("Enter you choice (1..6): ");
             clientInput = scanner.nextInt();
             String videoName;
+            int rating;
             switch (clientInput) {
                 case ADD_VIDEO:
                     System.out.println("Enter the name of the video that you want to add: ");
@@ -55,6 +56,12 @@ public class VideoLauncher {
                     myVideoStore.doReturn(videoName);
                     break;
                 case RECEIVE_RATING:
+                    System.out.println("Enter the name of the video whose rating you want to set:  ");
+                    scanner.nextLine();
+                    videoName = scanner.nextLine();
+                    System.out.println("Enter the rating of \"" + videoName + "\": ");
+                    rating = scanner.nextInt();
+                    myVideoStore.receiveRating(videoName, rating);
                     break;
                 case LIST_INVENTORY:
                     myVideoStore.listInventory();
