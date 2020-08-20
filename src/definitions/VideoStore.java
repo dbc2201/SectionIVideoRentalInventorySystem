@@ -15,6 +15,9 @@ public class VideoStore {
         this.store = store;
     }
 
+    /**
+     * This method prints all the videos in the inventory (store array).
+     */
     public void listInventory() {
         for (Video video : store) {
             System.out.println(video);

@@ -7,13 +7,15 @@
 package execution;
 
 import definitions.Video;
+import definitions.VideoStore;
 
 public class Main {
     public static void main(String[] args) {
-        // <The Reference Type> <The Reference Variable Name> = new <Constructor Calling>;
-        Video video = new Video("Sooryavansham");
-        Video video1 = new Video("Sivaji: The Boss");
-        System.out.println(video.hashCode());
-        System.out.println(video1.hashCode());
+        Video[] videos = new Video[5];
+        for (int i = 0; i < videos.length; i++) {
+            videos[i] = new Video("Video" + (i + 1));
+        }
+        VideoStore myVideoStore = new VideoStore(videos);
+        myVideoStore.listInventory();
     }
 }
